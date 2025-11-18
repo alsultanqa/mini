@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Mini Bank – Family Wallet Demo</title>
@@ -771,6 +772,53 @@
 <body class="owner-mode">
   <header>
     <div class="header-inner">
+      <style>
+  .mini-icon {
+    width: 160px;
+    animation: breathe 4s ease-in-out infinite;
+  }
+  .ai-dot {
+    animation: pulse 1.8s infinite;
+    transform-origin: center;
+  }
+
+  @keyframes breathe {
+    0%,100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.04); opacity: 0.92; }
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.35); }
+    100% { transform: scale(1); }
+  }
+</style>
+
+<svg class="mini-icon" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="50%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1E3A8A"/>
+    </linearGradient>
+  </defs>
+
+  <path d="M40 100
+           C40 50, 90 40, 100 80
+           C110 40, 160 50, 160 100
+           C160 150, 110 160, 100 120
+           C90 160, 40 150, 40 100Z"
+        fill="none" stroke="url(#g1)" stroke-width="10"
+        stroke-linecap="round"/>
+
+  <path d="M70 130 V70 L100 110 L130 70 V130"
+        stroke="white" stroke-width="12"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <circle class="ai-dot" cx="150" cy="60" r="10"
+          fill="#4ADE80" stroke="white" stroke-width="4"/>
+</svg>
+
       <div class="brand">
         <span class="brand-dot"></span>
         <span>Mini Bank</span>
